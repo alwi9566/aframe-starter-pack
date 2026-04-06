@@ -4,12 +4,20 @@
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
   </head>
   <body>
+    <a-assets>
+      <img id="plastic" src="plastic.jpg">
+      <img id="fabric" src="fabric.jpg">
+      <img id="plastic2" src="plastic2.jpg">
+      <img id="blue_plastic" src="blue_plastic.jpg">
+    </a-assets>
+
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-cylinder src="#plastic" color="#ffffff" position="1 0.75 -3" radius="0.05" height="2" color="#FFC65D"></a-cylinder>
+      <a-cone src="#fabric" color="#ffffff" position=" 1 1.5 -3" radius-bottom="1.2" radius-top="0.05" height="0.6"></a-cone>
+      <a-box src="#blue_plastic"  position="0 0.3 -3" width="1" height="0.6" depth="0.6"></a-box>
+      <a-box src="#plastic2" position="0 0.65 -3" width="1.05" height="0.15" depth="0.65"></a-box>  
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-sky src = "3d.png"></a-sky>
     </a-scene>
   </body>
 </html>
